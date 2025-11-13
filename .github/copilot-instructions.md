@@ -57,6 +57,8 @@ export class MyFeatureModule implements ModuleInterface {
 ```
 Enabled via `N8N_ENABLED_MODULES` env var. See `scripts/backend-module/backend-module-guide.md`.
 
+To scaffold a new backend module, run: `pnpm setup-backend-module`
+
 ## Essential Patterns & Conventions
 
 ### TypeScript Rules
@@ -147,7 +149,7 @@ packages/
 - **Type errors**: Run `pnpm build` first, then `pnpm typecheck` from package dir
 - **Import errors**: Check if imports use relative paths in dynamic imports (`await import('./...')`)
 - **Test failures**: Ensure you're in correct package directory
-- **Frontend**: Check `@packages/frontend/CLAUDE.md` for CSS variable usage
+- **Frontend**: Check `packages/frontend/CLAUDE.md` for CSS variable usage
 
 ### Performance
 - Dynamic imports in module entrypoints prevent loading unused code
