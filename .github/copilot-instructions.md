@@ -84,7 +84,7 @@ pnpm build && pnpm n8n-node-dev new
 1. Define types in `packages/@n8n/api-types`
 2. Implement backend in `packages/cli/src/modules/` (follow backend module guide)
 3. Add REST endpoints via controllers with `@RestController()` decorator
-4. Update frontend in `packages/editor-ui` with i18n support
+4. Update frontend in `packages/frontend/editor-ui` with i18n support
 5. Write tests with proper mocks
 6. **Always run `pnpm typecheck`** before committing
 
@@ -106,7 +106,7 @@ packages/
 ├── core/src/
 │   ├── execution-engine/     # Workflow execution
 │   └── node-execute-functions.ts
-├── editor-ui/                # Vue 3 frontend
+├── frontend/editor-ui/       # Vue 3 frontend
 ├── nodes-base/nodes/         # Built-in integration nodes
 └── workflow/                 # Core workflow types
 ```
@@ -125,7 +125,7 @@ packages/
 - **Type errors**: Run `pnpm build` first, then `pnpm typecheck` from package dir
 - **Import errors**: Check if imports use relative paths in dynamic imports (`await import('./...')`)
 - **Test failures**: Ensure you're in correct package directory
-- **Frontend**: Check `@packages/frontend/CLAUDE.md` for CSS variable usage
+- **Frontend**: Check `packages/frontend/CLAUDE.md` for CSS variable usage
 
 ### Performance  
 - Dynamic imports in module entrypoints prevent loading unused code
