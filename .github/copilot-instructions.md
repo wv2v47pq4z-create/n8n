@@ -34,7 +34,7 @@ pnpm lint && pnpm typecheck
 - `packages/workflow` - Core workflow types and interfaces  
 - `packages/core` - Workflow execution engine
 - `packages/cli` - Express server, REST API, CLI commands
-- `packages/editor-ui` - Vue 3 frontend
+- `packages/frontend/editor-ui` - Vue 3 frontend
 - `@n8n/design-system` - Reusable Vue components and design tokens
 
 ### Backend Module Pattern
@@ -49,6 +49,8 @@ export class MyFeatureModule implements ModuleInterface {
 }
 ```
 Enabled via `N8N_ENABLED_MODULES` env var. See `scripts/backend-module/backend-module-guide.md`.
+
+To scaffold a new backend module, run: `pnpm setup-backend-module`
 
 ## Essential Patterns & Conventions
 
